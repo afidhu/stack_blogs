@@ -1,0 +1,2 @@
+git commit -m "added allowed host"
+git push origin main
