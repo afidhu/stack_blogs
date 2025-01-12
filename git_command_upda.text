@@ -1,2 +1,4 @@
+git add .
 git commit -m "added allowed host"
-git push origin main
+ git remote add origin https://github.com/afidhu/stack_blogs.git
+ git push origin main
