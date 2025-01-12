@@ -20,10 +20,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-_xvwfg7su9jgv@(_f$voxjp#ntf7npdz_asus1y49vw%$2p_xv'
+SECRET_KEY = 'django-insecure-_xvwfg7su9jgv@(_f$voxjp#ntf7npdz_asus1y49vw%$2p_xv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
 
 ALLOWED_HOSTS = ['blogs-platform.onrender.com', '127.00.1', 'localhost']
 
@@ -126,7 +127,7 @@ STATIC_URL = 'static/'
 STATIC_URL = 'static/'
 MEDIA_ROOT=(BASE_DIR/'media')
 MEDIA_URL='/media/'
-STATIC_ROOT=BASE_DIR /"staticfiles",
+STATIC_ROOT=BASE_DIR /"staticfiles"
 
 
 STORAGES = {
