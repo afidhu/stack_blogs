@@ -29,7 +29,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['stack-blogs-8.onrender.com', '127.0.0.1', 'localhost']
 
 # ALLOWED_HOSTS=[]
-
+CORS_ALLOWED_ORIGINS=[
+    "https://frontend-om95.onrender.com"
+]
 
 # Application definition
 
