@@ -26,9 +26,10 @@ SECRET_KEY = 'django-insecure-_xvwfg7su9jgv@(_f$voxjp#ntf7npdz_asus1y49vw%$2p_xv
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['stack-blogs-8.onrender.com/', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['stack-blogs-8.onrender.com', '127.0.0.1', 'localhost']
 
 # ALLOWED_HOSTS=[]
+
 
 # Application definition
 
