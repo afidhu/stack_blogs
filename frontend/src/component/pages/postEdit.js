@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 
 const Sendpost = () => {
 
-    const{post_id} =useParams()
+    const { post_id } = useParams()
 
     const [title, setTitle] = useState('')
     const [description, setdescription] = useState('')
@@ -15,7 +15,7 @@ const Sendpost = () => {
 
     useEffect(() => {
         axios
-            .get('http://127.0.0.1:8000/postView/'+post_id)
+            .get('https://stack-blogs-8.onrender.com/postView/' + post_id)
             .then((resp) => {
                 setTitle(resp.data.title)
                 setdescription(resp.data.description)
@@ -40,14 +40,14 @@ const Sendpost = () => {
         postForm.append('video', video)
 
 
-        fetch('http://127.0.0.1:8000/crudPostView/'+post_id, {
+        fetch('https://stack-blogs-8.onrender.com/crudPostView/' + post_id, {
             method: "PUT",
             body: postForm
         })
             .then((resp) => resp.json())
-            .then((data)=>{
+            .then((data) => {
 
-                 window.location.replace('/')
+                window.location.replace('/')
             })
 
             .catch((err) => console.log("errr at: " + err))

@@ -9,15 +9,15 @@ const Viewcomment = (props) => {
 
     useEffect(() => {
         axios
-            .get("http://127.0.0.1:8000/commentlistviewall/" + postId)
+            .get("https://stack-blogs-8.onrender.com/commentlistviewall/" + postId)
             .then((resp) => {
                 setCommentData(resp.data)
                 // setcommenter(resp.data.author)
 
             })
-           
+
     }, [postId])
-    
+
 
     return (
         <div>
@@ -27,7 +27,7 @@ const Viewcomment = (props) => {
                         <>
                             <h4 id="scrollspyHeading1">{val.author.email}</h4>
                             <p> {val.comment}</p>
-                           
+
                         </>
                     )
                 })

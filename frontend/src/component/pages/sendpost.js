@@ -20,7 +20,7 @@ const Sendpost = () => {
         postForm.append('video', video)
 
       
-            fetch('http://127.0.0.1:8000/post/',{
+            fetch('https://stack-blogs-8.onrender.com/post//',{
                 method:"POST",
                 body:postForm
             })

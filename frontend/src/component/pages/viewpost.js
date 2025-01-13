@@ -14,7 +14,7 @@ const Postdetail = () => {
 
     useEffect(() => {
         axios
-            .get('http://127.0.0.1:8000/postView/' + post_id)
+            .get('https://stack-blogs-8.onrender.com/postView/' + post_id)
             .then((resp) => {
                 setView_id(resp.data)
             })
@@ -26,7 +26,7 @@ const Postdetail = () => {
 
 
     const deletepost = (id) => {
-        fetch('http://127.0.0.1:8000/crudPostView/' + id, {
+        fetch('https://stack-blogs-8.onrender.com/crudPostView/' + id, {
             method: "DELETE",
 
         })
@@ -41,16 +41,16 @@ const Postdetail = () => {
 
 
     // count comment
-        
-        useEffect(() => {
-                axios
-                .get('http://127.0.0.1:8000/CommentListViewcount/' + post_id)
-                .then((resp)=>{
-                    setCountcomment(resp.data.comment_count)
-                    // console.log(resp.data.comment_count)
-                })
-        }, [post_id])
-    
+
+    useEffect(() => {
+        axios
+            .get('https://stack-blogs-8.onrender.com/CommentListViewcount/' + post_id)
+            .then((resp) => {
+                setCountcomment(resp.data.comment_count)
+                // console.log(resp.data.comment_count)
+            })
+    }, [post_id])
+
 
     return (
         <div>
@@ -96,15 +96,15 @@ const Postdetail = () => {
                                                                 style={{ height: '80px', overflowY: 'auto' }}
                                                                 tabindex="0"
                                                             >
-        
-                                                                
-                                                                <Viewcomment postId={post_id}  />
-                                                             
+
+
+                                                                <Viewcomment postId={post_id} />
+
 
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <Addcomment postId={post_id} />
 
                                                 </div>
