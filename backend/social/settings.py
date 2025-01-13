@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-_xvwfg7su9jgv@(_f$voxjp#ntf7npdz_asus1y49vw%$2p_xv
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['blogs-platform.onrender.com', '127.00.1', 'localhost']
+ALLOWED_HOSTS = ['blogs-platform.onrender.com', '127.0.0.1', 'localhost']
 
+# ALLOWED_HOSTS=[]
 
 # Application definition
 
@@ -39,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'POST',
-        'corsheaders',
+    'corsheaders',
     'rest_framework'
 ]
 
@@ -130,12 +131,7 @@ MEDIA_URL='/media/'
 STATIC_ROOT=BASE_DIR /"staticfiles"
 
 
-STORAGES = {
-    # ...
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
